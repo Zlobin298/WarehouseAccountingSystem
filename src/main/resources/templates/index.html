@@ -20,5 +20,12 @@
 
     <button type="submit">Рассчитать остатки по товарам</button>
 </form>
+<div th:if="${result}">
+    <a>Остаток по количеству товаров = </a>
+    <a th:text="${result}"></a>
+</div>
+<div th:if="${isLessZero}">
+    <p>Остатки слишком малы по соотношению с приходом и общим количеством товаров!</p>
+</div>
 </body>
 </html>
