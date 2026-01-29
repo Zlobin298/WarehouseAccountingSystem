@@ -8,6 +8,9 @@
 <body>
 <h2>Система учета склада</h2>
 <form th:method="POST" th:action="@{/result}">
+    <label for="allGoodsStock">Введите сколько всего товаров на складе:</label>
+    <input type="number" id="allGoodsStock" name="allGoodsStock" min="0" required><br>
+
     <label for="coming">Введите приход товаров:</label>
     <input type="number" id="coming" name="coming" min="0" required><br>
 
