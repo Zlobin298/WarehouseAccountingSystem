@@ -23,24 +23,24 @@ class WarehouseAccountingSystemApplicationTests {
 
     static Stream<Arguments> objectDto() {
         WarehouseAccountingSystemDTO dto1 = new WarehouseAccountingSystemDTO();
-        dto1.setAllGoodsStock("200");
-        dto1.setComing("50");
-        dto1.setExpenditure("100");
+        dto1.setAllGoodsStock(200L);
+        dto1.setComing(50L);
+        dto1.setExpenditure(100L);
 
         WarehouseAccountingSystemDTO dto2 = new WarehouseAccountingSystemDTO();
-        dto2.setAllGoodsStock("500");
-        dto2.setComing("100");
-        dto2.setExpenditure("100");
+        dto2.setAllGoodsStock(500L);
+        dto2.setComing(100L);
+        dto2.setExpenditure(100L);
 
         WarehouseAccountingSystemDTO dto3 = new WarehouseAccountingSystemDTO();
-        dto3.setAllGoodsStock("10");
-        dto3.setComing("0");
-        dto3.setExpenditure("5");
+        dto3.setAllGoodsStock(10L);
+        dto3.setComing(0L);
+        dto3.setExpenditure(5L);
 
         WarehouseAccountingSystemDTO dto4 = new WarehouseAccountingSystemDTO();
-        dto4.setAllGoodsStock("100");
-        dto4.setComing("0");
-        dto4.setExpenditure("200");
+        dto4.setAllGoodsStock(100L);
+        dto4.setComing(0L);
+        dto4.setExpenditure(200L);
 
 
         return Stream.of(
@@ -61,9 +61,9 @@ class WarehouseAccountingSystemApplicationTests {
     @Test
     void resultProductBalancesNotNull() {
         WarehouseAccountingSystemDTO dto = new WarehouseAccountingSystemDTO();
-        dto.setAllGoodsStock("400");
-        dto.setComing("100");
-        dto.setExpenditure("200");
+        dto.setAllGoodsStock(400L);
+        dto.setComing(100L);
+        dto.setExpenditure(200L);
 
         when(service.resultProductBalances(dto)).thenReturn(300L);
 
