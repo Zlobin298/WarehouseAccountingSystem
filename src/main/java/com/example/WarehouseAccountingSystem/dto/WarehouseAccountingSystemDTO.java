@@ -1,20 +1,19 @@
 package com.example.WarehouseAccountingSystem.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.Data;
 
 @Data
 public class WarehouseAccountingSystemDTO {
-    @NotBlank(message = "поле весь товар на складе не должно быть пустым")
-    @Size(min = 0, message = "Поле должно быть меньше или равно нулю")
-    private String allGoodsStock;
+    @NotNull(message = "Поле весь товар на складе не должно быть пустым")
+    @Min(value = 0, message = "Поле должно быть меньше или равно нулю")
+    private Long allGoodsStock;
 
-    @NotBlank(message = "Поле приход не должно быть пустым")
-    @Size(min = 0, message = "Поле должно быть меньше или равно нулю")
-    private String coming;
+    @NotNull(message = "Поле приход не должно быть пустым")
+    @Min(value = 0, message = "Поле должно быть меньше или равно нулю")
+    private Long coming;
 
-    @NotBlank(message = "Поле расход не должно быть пустым")
-    @Size(min = 0, message = "Поле должно быть меньше или равно нулю")
-    private String expenditure;
+    @NotNull(message = "Поле расход не должно быть пустым")
+    @Min(value = 0, message = "Поле должно быть меньше или равно нулю")
+    private Long expenditure;
 }

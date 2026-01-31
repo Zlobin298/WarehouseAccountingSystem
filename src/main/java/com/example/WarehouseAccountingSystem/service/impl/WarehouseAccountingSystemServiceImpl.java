@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 public class WarehouseAccountingSystemServiceImpl implements WarehouseAccountingSystemService {
     @Override
     public Long resultProductBalances(WarehouseAccountingSystemDTO dto) {
-        return Long.parseLong(dto.getAllGoodsStock()) - Long.parseLong(dto.getExpenditure()) + Long.parseLong(dto.getComing());
+        return dto.getAllGoodsStock() - dto.getExpenditure() + dto.getComing();
     }
 }
